@@ -1,0 +1,87 @@
+//dependencies
+@use "variables" as vars;
+@use "mixins" as *;
+@use "fonts" as fonts;
+
+body {
+  background-color: vars.$white;
+  color: vars.$black;
+  text-align: center;
+  font-family: vars.$font-text;
+  font-weight: bold;
+  margin: auto;
+}
+
+.rabbit-ear {
+  margin-top: 20px;
+  width: 100px;
+  @include respondMin(vars.$breakpoints-tablet) {
+    width: 150px;
+  }
+  @include respondMin(vars.$breakpoints-desktop) {
+    width: 300px;
+  }
+}
+
+h1 {
+  font-size: 20px;
+  margin: 20px 10px 0 10px;
+  @include respondMin(vars.$breakpoints-tablet) {
+    font-size: 30px;
+    margin: 20px 0;
+  }
+  @include respondMin(vars.$breakpoints-laptop) {
+    font-size: 50px;
+  }
+  @include respondMin(vars.$breakpoints-desktop) {
+    font-size: 80px;
+  }
+}
+
+p {
+  margin: 5px;
+}
+
+.wrapper-primary {
+  display: grid;
+  padding: 20px 30px;
+  @include respondMin(vars.$breakpoints-tablet) {
+    grid-template-columns: repeat(4, 110px);
+    justify-content: center;
+  }
+  @include respondMin(vars.$breakpoints-laptop) {
+    grid-template-columns: repeat(4, 180px);
+  }
+}
+
+.num {
+  font-family: vars.$font-count-number;
+  font-size: 40px;
+  margin: 0;
+  @include respondMin(vars.$breakpoints-tablet) {
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      border-right-style: solid;
+      border-color: vars.$light-gray;
+      border-width: 2px;
+    }
+  }
+  @include respondMin(vars.$breakpoints-laptop) {
+    font-size: 50px;
+  }
+  @include respondMin(vars.$breakpoints-desktop) {
+    font-size: 60px;
+  }
+}
+
+.date {
+  font-size: 15px;
+  @include respondMin(vars.$breakpoints-tablet) {
+    font-size: 20px;
+  }
+  @include respondMin(vars.$breakpoints-laptop) {
+  }
+  @include respondMin(vars.$breakpoints-desktop) {
+  }
+}

@@ -1,3 +1,112 @@
+/* aboreto-regular - latin */
+@font-face {
+  font-family: "Aboreto";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../webfonts/aboreto-v2-latin-regular.woff2") format("woff2"), url("../webfonts/aboreto-v2-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* aldrich-regular - latin */
+@font-face {
+  font-family: "Aldrich";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../webfonts/aldrich-v17-latin-regular.woff2") format("woff2"), url("../webfonts/aldrich-v17-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+body {
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-family: "Aboreto";
+  font-weight: bold;
+  margin: auto;
+}
 
+.rabbit-ear {
+  margin-top: 20px;
+  width: 100px;
+}
+@media only screen and (min-width: 576px) {
+  .rabbit-ear {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 1992px) {
+  .rabbit-ear {
+    width: 300px;
+  }
+}
+
+h1 {
+  font-size: 20px;
+  margin: 20px 10px 0 10px;
+}
+@media only screen and (min-width: 576px) {
+  h1 {
+    font-size: 30px;
+    margin: 20px 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 1992px) {
+  h1 {
+    font-size: 80px;
+  }
+}
+
+p {
+  margin: 5px;
+}
+
+.wrapper-primary {
+  display: grid;
+  padding: 20px 30px;
+}
+@media only screen and (min-width: 576px) {
+  .wrapper-primary {
+    grid-template-columns: repeat(4, 110px);
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .wrapper-primary {
+    grid-template-columns: repeat(4, 180px);
+  }
+}
+
+.num {
+  font-family: "Aldrich";
+  font-size: 40px;
+  margin: 0;
+}
+@media only screen and (min-width: 576px) {
+  .num:nth-of-type(1), .num:nth-of-type(2), .num:nth-of-type(3) {
+    border-right-style: solid;
+    border-color: rgb(231, 231, 231);
+    border-width: 2px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .num {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 1992px) {
+  .num {
+    font-size: 60px;
+  }
+}
+
+.date {
+  font-size: 15px;
+}
+@media only screen and (min-width: 576px) {
+  .date {
+    font-size: 20px;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
