@@ -13,7 +13,7 @@ body {
 }
 
 .rabbit-ear {
-  margin-top: 50px;
+  margin-top: 40px;
   width: 100px;
   @include respondMin(vars.$breakpoints-tablet) {
     width: 150px;
@@ -34,7 +34,7 @@ h1 {
     font-size: 50px;
   }
   @include respondMin(vars.$breakpoints-desktop) {
-    font-size: 80px;
+    font-size: 55px;
   }
 }
 
@@ -84,19 +84,6 @@ p {
   }
 }
 
-#countdown {
-  display: block;
-  padding: 30px 0;
-  font-size: 35px;
-  @include respondMin(vars.$breakpoints-tablet) {
-    font-size: 50px;
-  }
-
-  @include respondMin(vars.$breakpoints-laptop) {
-    font-size: 75px;
-  }
-}
-
 .num {
   font-family: vars.$font-count-number;
   font-size: 40px;
@@ -128,9 +115,10 @@ p {
   @include respondMin(vars.$breakpoints-laptop) {
     font-size: 40px;
   }
-  @include respondMin(vars.$breakpoints-desktop) {
-    font-size: 60px;
-  }
+}
+
+#background {
+  height: 470px;
 }
 
 @include respondMin(vars.$breakpoints-tablet) {
