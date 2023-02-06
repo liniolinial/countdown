@@ -13,7 +13,7 @@ body {
 }
 
 .rabbit-ear {
-  margin-top: 20px;
+  margin-top: 50px;
   width: 100px;
   @include respondMin(vars.$breakpoints-tablet) {
     width: 150px;
@@ -42,15 +42,58 @@ p {
   margin: 5px;
 }
 
+.num {
+  grid-column: 1/2;
+}
+.date {
+  grid-column: 2/3;
+}
+#days,
+.D {
+  grid-row: 1/2;
+}
+
+#hours,
+.H {
+  grid-row: 2/3;
+}
+
+#min,
+.M {
+  grid-row: 3/4;
+}
+
+#sec,
+.S {
+  grid-row: 4/5;
+}
+
 .wrapper-primary {
   display: grid;
+  grid-template-columns: repeat(2, 100px);
+  justify-content: center;
+  grid-gap: 1rem;
   padding: 20px 30px;
+
   @include respondMin(vars.$breakpoints-tablet) {
     grid-template-columns: repeat(4, 110px);
-    justify-content: center;
   }
+
   @include respondMin(vars.$breakpoints-laptop) {
     grid-template-columns: repeat(4, 180px);
+  }
+}
+
+#countdown {
+  display: block;
+  padding: 30px 0;
+  font-size: 35px;
+  @include respondMin(vars.$breakpoints-tablet) {
+    font-size: 50px;
+  }
+
+  @include respondMin(vars.$breakpoints-laptop) {
+    font-size: 75px;
   }
 }
 
@@ -68,20 +111,40 @@ p {
     }
   }
   @include respondMin(vars.$breakpoints-laptop) {
-    font-size: 50px;
+    font-size: 60px;
+  }
+  @include respondMin(vars.$breakpoints-desktop) {
+    font-size: 70px;
+  }
+}
+
+.date {
+  font-size: 15px;
+  margin: auto 0;
+  @include respondMin(vars.$breakpoints-tablet) {
+    font-size: 20px;
+    margin: 0;
+  }
+  @include respondMin(vars.$breakpoints-laptop) {
+    font-size: 40px;
   }
   @include respondMin(vars.$breakpoints-desktop) {
     font-size: 60px;
   }
 }
 
-.date {
-  font-size: 15px;
-  @include respondMin(vars.$breakpoints-tablet) {
-    font-size: 20px;
-  }
-  @include respondMin(vars.$breakpoints-laptop) {
-  }
-  @include respondMin(vars.$breakpoints-desktop) {
+@include respondMin(vars.$breakpoints-tablet) {
+  .num,
+  .date,
+  #days,
+  #hours,
+  #min,
+  #sec,
+  .D,
+  .H,
+  .M,
+  .S {
+    grid-row: unset;
+    grid-column: unset;
   }
 }
