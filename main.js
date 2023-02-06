@@ -42,6 +42,6 @@ let x = setInterval(function(){
         easterEgg.style.backgroundPositionX = "center";
         easterEgg.style.backgroundSize = "21%";
         document.querySelector("h1").style.color ="white";
-        document.querySelector("body").style.backgroundColor ="black";
+        document.querySelector("body").style.backgroundColor ="#2c2f69";
     }
 });
