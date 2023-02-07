@@ -1,10 +1,11 @@
 //Ostern 2023
 let countDownDate = new Date("April 09, 2023 00:00:00").getTime();
 //test raffle release
-// let countDownDate = new Date("Feb 06, 2023 16:54:00").getTime();
+// let countDownDate = new Date("Feb 07, 2023 12:15:00").getTime();
 const afterCountDown = document.getElementById('countdown');
 const froheOstern = document.getElementById("release");
 const easterEgg = document.getElementById("background");
+const firework = document.getElementById("fireworkframe");
 
 //update the countdown every 1 sec
 let x = setInterval(function(){
