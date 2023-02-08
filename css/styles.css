@@ -20,41 +20,46 @@ body {
   font-weight: bold;
   margin: auto;
 }
+body.released {
+  background-color: #2c2f69;
+}
+body.released h1 {
+  display: none;
+}
+body.released #fireworkframe {
+  display: flex;
+}
+body.released #countdown {
+  display: none;
+}
+body.released #background {
+  display: block;
+  background-image: url(/images/broken_egg1.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  height: 60vh;
+  width: 80%;
+  margin: 0 auto;
+  background-size: contain;
+}
+body.released #release {
+  display: block;
+  padding: 30px 0;
+  font-size: clamp(4rem, 60vw, 6rem);
+  color: #f5cf52;
+  text-shadow: -1px 1px 0 rgb(220, 20, 60), -2px 2px 0 rgb(220, 20, 60), -3px 3px 0 rgb(220, 20, 60);
+}
 
 .rabbit-ear {
   margin-top: 40px;
-  width: 100px;
-}
-@media only screen and (min-width: 576px) {
-  .rabbit-ear {
-    width: 150px;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .rabbit-ear {
-    width: 300px;
-  }
+  width: 60%;
+  object-fit: contain;
+  max-height: 30vh;
 }
 
 h1 {
-  font-size: 20px;
+  font-size: clamp(1rem, 60vw, 3rem);
   margin: 20px 10px 0 10px;
-}
-@media only screen and (min-width: 576px) {
-  h1 {
-    font-size: 30px;
-    margin: 20px 0;
-  }
-}
-@media only screen and (min-width: 992px) {
-  h1 {
-    font-size: 50px;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  h1 {
-    font-size: 55px;
-  }
 }
 
 p {
@@ -243,7 +248,7 @@ p {
 #firework1 {
   left: 50%;
   top: 50%;
-  transform: scale(1);
+  transform: scale(100%/40%);
 }
 
 #firework1 .explosion::before {

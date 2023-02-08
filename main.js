@@ -1,7 +1,7 @@
 //Ostern 2023
 let countDownDate = new Date("April 09, 2023 00:00:00").getTime();
 //test raffle release
-// let countDownDate = new Date("Feb 07, 2023 13:45:00").getTime();
+// let countDownDate = new Date("Feb 08, 2023 13:22:40").getTime();
 const afterCountDown = document.getElementById('countdown');
 const froheOstern = document.getElementById("release");
 const easterEgg = document.getElementById("background");
@@ -29,23 +29,10 @@ let x = setInterval(function(){
     document.getElementById("sec").innerHTML = sec;
 
     //after countdown,
-    if(interval < 0){
+    console.log(interval)
+    if(interval <= 1000){
         clearInterval(x);
-        afterCountDown.style.display = "none";
-        document.querySelector("h1").style.display = "none";
-        document.getElementById("release").innerHTML = "Frohe Ostern!";
-        document.querySelector("body").style.backgroundColor ="#2c2f69";
-        firework.style.display = "flex";
-        froheOstern.style.padding = "30px 0";
-        froheOstern.style.display = "block";
-        froheOstern.style.fontSize = "2.8rem";
-        froheOstern.style.color = "yellow";
-        froheOstern.style.textShadow = "-1px 1px 0 crimson, -2px 2px 0 crimson, -3px 3px 0 crimson";
-        easterEgg.style.display = "block";
-        easterEgg.style.backgroundImage ="url(images/broken_egg1.png)";
-        easterEgg.style.backgroundRepeat = "no-repeat";
-        easterEgg.style.backgroundPositionX = "center";
-        easterEgg.style.backgroundSize = "21%";
-        
+        froheOstern.innerHTML = "Frohe Ostern!";
+        document.body.classList.add("released");
     }
 });
