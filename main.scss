@@ -70,22 +70,22 @@ p {
 .date {
   grid-column: 2/3;
 }
-#days,
+.days,
 .D {
   grid-row: 1/2;
 }
 
-#hours,
+.hours,
 .H {
   grid-row: 2/3;
 }
 
-#min,
+.min,
 .M {
   grid-row: 3/4;
 }
 
-#sec,
+.sec,
 .S {
   grid-row: 4/5;
 }
@@ -254,10 +254,10 @@ p {
 @include respondMin(vars.$breakpoints-tablet) {
   .num,
   .date,
-  #days,
-  #hours,
-  #min,
-  #sec,
+  .days,
+  .hours,
+  .min,
+  .sec,
   .D,
   .H,
   .M,

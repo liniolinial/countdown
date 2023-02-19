@@ -1,11 +1,11 @@
 //Ostern 2023
-let countDownDate = new Date("April 09, 2023 00:00:00").getTime();
+// let countDownDate = new Date("April 09, 2023 00:00:00").getTime();
 //test raffle release
-// let countDownDate = new Date("Feb 08, 2023 13:22:40").getTime();
-const afterCountDown = document.getElementById('countdown');
-const froheOstern = document.getElementById("release");
-const easterEgg = document.getElementById("background");
-const firework = document.getElementById("fireworkframe");
+let countDownDate = new Date("Feb 08, 2023 13:22:40").getTime();
+const afterCountDown = document.querySelector('#countdown');
+const froheOstern = document.querySelector("#release");
+const easterEgg = document.querySelector("#background");
+const firework = document.querySelector("#fireworkframe");
 
 //update the countdown every 1 sec
 let x = setInterval(function(){
@@ -23,10 +23,10 @@ let x = setInterval(function(){
     let sec = Math.floor((interval % (1000 * 60)) / (1000));
 
     //Output the result in an element with each num x class
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("min").innerHTML = min;
-    document.getElementById("sec").innerHTML = sec;
+    document.querySelector(".days").innerHTML = days;
+    document.querySelector(".hours").innerHTML = hours;
+    document.querySelector(".min").innerHTML = min;
+    document.querySelector(".sec").innerHTML = sec;
 
     //after countdown,
     console.log(interval)
@@ -35,4 +35,7 @@ let x = setInterval(function(){
         froheOstern.innerHTML = "Frohe Ostern!";
         document.body.classList.add("released");
     }
-});
+}); //für performant besser delay zu geben, aber gibt es bei neu Starten delay auchS
+
+//Feedback:
+// getElementById sollte immer mit document geschrieben
